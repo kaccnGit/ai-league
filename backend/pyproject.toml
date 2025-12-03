@@ -1,0 +1,26 @@
+[project]
+name = "ai-league-backend"
+version = "0.1.0"
+description = "FastAPI backend for AI League tool portal"
+authors = [{ name = "AI League" }]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.110,<1.0",
+    "uvicorn[standard]>=0.29,<1.0",
+    "pydantic>=2.6,<3.0",
+    "python-dateutil>=2.9",
+    "PyYAML>=6.0",
+]
+
+[build-system]
+requires = ["setuptools>=67"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = [
+    "httpx",
+    "pytest",
+]
+
+[project.scripts]
+ai-league-api = "uvicorn app.main:app"

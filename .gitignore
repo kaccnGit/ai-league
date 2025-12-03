@@ -1,0 +1,16 @@
+# Node
+node_modules
+npm-debug.log*
+
+# Vite
+frontend/dist
+frontend/.vite
+
+# Python
+__pycache__
+*.pyc
+backend/.venv
+.venv
+
+# macOS
+.DS_Store
