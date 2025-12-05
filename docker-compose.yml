@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  ai-league:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NPM_REGISTRY=https://registry.npmmirror.com
+        - PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+    image: ai-league:latest
+    ports:
+      - "8080:8000"
+    environment:
+      FRONTEND_DIST_PATH: /app/frontend-dist
+    restart: unless-stopped
+    # 添加网络配置以提高构建成功率
+    network_mode: "bridge"
