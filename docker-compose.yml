@@ -5,9 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        - NPM_REGISTRY=https://registry.npmmirror.com
-        - PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
     image: ai-league:latest
     ports:
       - "8080:8000"
