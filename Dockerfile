@@ -1,6 +1,3 @@
-ARG NPM_REGISTRY=https://registry.npmmirror.com
-ARG PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
-
 # Build frontend asset
 FROM node:20-alpine AS frontend-builder
 WORKDIR /app/frontend
